@@ -10,12 +10,9 @@ class Solution:
         d={}
         for i in range(len(s)):
             if s[i] not in d.keys():
-                if t[i] in d.values():
-                    return False
                 d[s[i]]=t[i]
             else:
                 if d[s[i]]!=t[i]:
                     return False
-        return True
 # @lc code=end
 

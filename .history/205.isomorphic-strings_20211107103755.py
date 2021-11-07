@@ -9,6 +9,7 @@ class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         d={}
         for i in range(len(s)):
+            print(s[i],t[i])
             if s[i] not in d.keys():
                 if t[i] in d.values():
                     return False
@@ -16,6 +17,7 @@ class Solution:
             else:
                 if d[s[i]]!=t[i]:
                     return False
+            print(d)
         return True
 # @lc code=end
 
