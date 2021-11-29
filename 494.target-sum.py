@@ -13,6 +13,7 @@ class Solution:
         return self.dfs(nums,target,memo)
 
     def dfs(self, nums, target, memo):
+        print(memo)
         if tuple(nums+[target]) in memo:
             return memo[tuple(nums+[target])]
         if not nums:
