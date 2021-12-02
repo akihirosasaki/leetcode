@@ -17,7 +17,6 @@ class Solution:
         return output
 
     def dfs(self, mat, sr, sc, rl, cl, count,visited):
-        # print(sr,sc,visited,count)
         if (sr<0 or sr>=rl or sc<0 or sc>=cl or visited[sr][sc]):
             return 
         if mat[sr][sc]==0:
@@ -28,7 +27,7 @@ class Solution:
         n2=self.dfs(mat, sr, sc+1, rl, cl, count+1, visited)
         n3=self.dfs(mat, sr-1, sc, rl, cl, count+1, visited)
         n4=self.dfs(mat, sr, sc-1, rl, cl, count+1, visited)
-        return min((i for i in [n1,n2,n3,n4] if i is not None), default=None)
+        return min((x for x in [n1,n2,n3,n4] if x is not None), default=None)
         
 # @lc code=end
 
